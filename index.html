@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blood Donation Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 🔴 Background Video -->
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="9573568-uhd_2732_1440_25fps.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <header>
+    <h1>Blood Donation Portal</h1>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Register as a Donor</h2>
+      <form id="donorForm">
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="text" id="location" placeholder="City/Location" required />
+
+        <label for="bloodType">Select Blood Type:</label>
+        <select id="bloodType" required>
+          <option value="">--Choose Blood Type--</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+
+        <label for="registrationDate">Donation Date:</label>
+        <input type="date" id="registrationDate" required />
+
+        <button type="submit">Register</button>
+      </form>
+      <p id="successMsg" class="success-message"></p>
+    </section>
+
+    <section class="donor-list">
+      <h2>Search Donors</h2>
+      <select id="filterBloodType">
+        <option value="">--Filter by Blood Type--</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Search by City" />
+      <div id="donorCards"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
